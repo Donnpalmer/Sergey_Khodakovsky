@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">Заполните анкету</h1>
+    <form id="form1" name="one" action="http://fi.it-academy.by/TestForm.php" method="POST">
+    <fieldset>
+        <legend>Личные данные</legend>
+        <input type="text" size="25" required placeholder="Фамилия" pattern="[А-Яа-яЁё]" autofocus> <br>
+        <input type="text" size="20" required placeholder="Имя" pattern="[А-Яа-яЁё]">      <br>
+        <input type="text" size="24" required placeholder="Отчество" pattern="[А-Яа-яЁё]">
+        <fieldset>
+            <legend>Паспортные данные</legend>
+            <input type="text" size="2" max="2" required placeholder="Серия" pattern="[A-Z],[A-Za-z]{2}"> 
+            <input type="text" size="12" max="7" required placeholder="Номер паспорта"pattern="[0-9]{7}">
+        </fieldset>
+        <fieldset>
+            <legend>Дата рождения</legend>
+            <input type="text" size="4" max="4"  placeholder="2000" pattern="[0-9]{4}"> <br>
+            <select name="month" >
+                <option value="t1">Январь</option>
+                <option value="t2">Февраль</option>
+                <option value="t3">Март</option>
+                <option value="t4">Апрель</option>
+                <option value="t5">Май</option>
+                <option value="t6">Июнь</option>
+                <option value="t7">Июль</option>
+                <option value="t8">Август</option>
+                <option value="t9">Сентябрь</option>
+                <option value="t10">Октябрь</option>
+                <option value="t11">Ноябрь</option>
+                <option value="t12">Декабрь</option>
+            </select> <br>
+            <input type="number" size="2" min="1" max="31" step="1">
+        </fieldset>
+        <select name="country" required>
+            <option value="ta1">РБ</option>
+            <option value="ta2">РФ</option>
+            <option value="ta3">ЮА</option>
+        </select> <br>
+        Адрес: <br>
+        <textarea name="pole"  cols="20" rows="5"></textarea>
+    </fieldset>
+    <fieldset>
+        <legend>Интересы</legend>
+        <fieldset>
+            <legend>array:Хобби</legend>
+            <input type="checkbox" name="ryb" checked>"Рыбалка" <br>
+            <input type="checkbox" name="asrt" checked>"Астрономия" <br>
+            <input type="checkbox" name="dav" checked>"Дайвинг" <br>
+            <input type="checkbox" name="marks" checked>"Марки" 
+        </fieldset>
+        <fieldset>
+            <legend>Домашние животные</legend>
+            array: select multiple <br>
+            <select name="animals" multiple>
+            <optgroup label="Попугаи">
+                <option value="g1">Волнистый</option>
+                <option value="g2">Ара</option>
+                <option value="g3">Неразлучный</option>
+            </optgroup>
+            <optgroup label="Рыба">
+                <option value="g4">Окуни</option>
+                <option value="g5">Караси</option>
+                <option value="g6">Щуки</option>
+            </optgroup> 
+            <optgroup label="Птицы">
+                <option value="g7">Стая ворон</option>
+                <option value="g8">Аист</option>
+                <option value="g9">Чайка</option>
+            </optgroup>   
+            </select>
+        </fieldset>
+    </fieldset>
+    <fieldset>
+        <legend>Данные для входа и восстановления пароля</legend>
+        <input type="text" size="20" min="5" required placeholder="Логин" pattern="[А-Zа-z]"> <br>
+        <input type="password" size="20" min="10" required placeholder="Пароль" pattern="[А-Zа-z]" autocomplete="off">
+    </fieldset>
+    <fieldset>
+        <legend>Координаты</legend>
+        <input type="email" placeholder="Введите адрес почты"> <br>
+        <input type="url" placeholder="Введите адрес сайта">
+    </fieldset>
+    <fieldset>
+        <legend>Цифры</legend>
+        <input type="number" min="-2.5" max="2.5" step="0.1"> <br>
+        <input type="range" max="10" min="1">
+    </fieldset>
+    <fieldset>
+        <legend>Кнопки управления</legend>
+        <input type="submit" value="Отправить">
+        <input type="reset" value="Сбросить"> <br>
+        <input type="image" src="prazd.gif">
+
+    </fieldset>
+    </form>
+    
+</body>
+</html>
